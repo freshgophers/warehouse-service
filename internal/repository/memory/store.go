@@ -56,10 +56,6 @@ func (r *StoreRepository) Get(ctx context.Context, id string) (dest store.Entity
 	return
 }
 
-func (r *StoreRepository) GetCityByID(ctx context.Context, id string) (dest store.City, err error) {
-	return
-}
-
 func (r *StoreRepository) Update(ctx context.Context, id string, data store.Entity) (err error) {
 	r.Lock()
 	defer r.Unlock()

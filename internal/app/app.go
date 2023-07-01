@@ -60,6 +60,11 @@ func Run() {
 	warehouseService, err := warehouse.New(
 		warehouse.WithStoreRepository(repositories.Store),
 		warehouse.WithStoreCache(repositories.Store),
+		warehouse.WithCityRepository(repositories.City),
+		warehouse.WithScheduleRepository(repositories.Schedule),
+		warehouse.WithDeliveryRepository(repositories.Delivery),
+		warehouse.WithCurrencyRepository(repositories.Currency),
+		warehouse.WithCountryRepository(repositories.Country),
 	)
 
 	handlers, err := handler.New(

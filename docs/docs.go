@@ -653,6 +653,82 @@ const docTemplate = `{
                 }
             }
         },
+        "city.Response": {
+            "type": "object",
+            "properties": {
+                "geocenter": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "currency.Response": {
+            "type": "object",
+            "properties": {
+                "decimals": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "prefix": {
+                    "type": "boolean"
+                },
+                "sing": {
+                    "type": "string"
+                }
+            }
+        },
+        "delivery.Area": {
+            "type": "object",
+            "properties": {
+                "latitude": {
+                    "type": "string"
+                },
+                "longitude": {
+                    "type": "string"
+                }
+            }
+        },
+        "delivery.Period": {
+            "type": "object",
+            "properties": {
+                "day": {
+                    "type": "string"
+                },
+                "from": {
+                    "type": "string"
+                },
+                "to": {
+                    "type": "string"
+                }
+            }
+        },
+        "delivery.Response": {
+            "type": "object",
+            "properties": {
+                "areas": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/delivery.Area"
+                    }
+                },
+                "isActive": {
+                    "type": "boolean"
+                },
+                "periods": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/delivery.Period"
+                    }
+                }
+            }
+        },
         "product.Request": {
             "type": "object",
             "properties": {
@@ -697,13 +773,56 @@ const docTemplate = `{
                 }
             }
         },
+        "schedule.Period": {
+            "type": "object",
+            "properties": {
+                "day": {
+                    "type": "string"
+                },
+                "from": {
+                    "type": "string"
+                },
+                "to": {
+                    "type": "string"
+                }
+            }
+        },
+        "schedule.Response": {
+            "type": "object",
+            "properties": {
+                "isActive": {
+                    "type": "boolean"
+                },
+                "periods": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/schedule.Period"
+                    }
+                }
+            }
+        },
         "store.Request": {
             "type": "object",
             "properties": {
                 "address": {
                     "type": "string"
                 },
+                "area": {
+                    "$ref": "#/definitions/delivery.Area"
+                },
+                "city": {
+                    "$ref": "#/definitions/city.Response"
+                },
                 "cityID": {
+                    "type": "string"
+                },
+                "currency": {
+                    "$ref": "#/definitions/currency.Response"
+                },
+                "delivery": {
+                    "$ref": "#/definitions/delivery.Response"
+                },
+                "id": {
                     "type": "string"
                 },
                 "isActive": {
@@ -720,6 +839,9 @@ const docTemplate = `{
                 },
                 "rating": {
                     "type": "number"
+                },
+                "schedule": {
+                    "$ref": "#/definitions/schedule.Response"
                 }
             }
         }

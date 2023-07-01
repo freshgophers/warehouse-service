@@ -4,16 +4,27 @@ import (
 	"errors"
 	"github.com/shopspring/decimal"
 	"net/http"
+	"warehouse-service/internal/domain/city"
+	"warehouse-service/internal/domain/country"
+	"warehouse-service/internal/domain/currency"
+	"warehouse-service/internal/domain/delivery"
+	"warehouse-service/internal/domain/schedule"
 )
 
 type Request struct {
-	MerchantID string          `json:"merchantID"`
-	CityID     string          `json:"cityID"`
-	Name       string          `json:"name"`
-	Address    string          `json:"address"`
-	Location   string          `json:"location"`
-	Rating     decimal.Decimal `json:"rating"`
-	IsActive   bool            `json:"isActive"`
+	ID         string            `json:"id"`
+	MerchantID string            `json:"merchantID"`
+	CityID     string            `json:"cityID"`
+	Name       string            `json:"name"`
+	Address    string            `json:"address"`
+	Location   string            `json:"location"`
+	Rating     decimal.Decimal   `json:"rating"`
+	IsActive   bool              `json:"isActive"`
+	City       city.Response     `json:"city"`
+	Schedule   schedule.Response `json:"schedule"`
+	Delivery   delivery.Response `json:"delivery"`
+	Currency   currency.Response `json:"currency"`
+	Area       delivery.Area     `json:"area"`
 }
 
 func (s *Request) Bind(r *http.Request) error {
@@ -41,52 +52,19 @@ func (s *Request) Bind(r *http.Request) error {
 }
 
 type Response struct {
-	ID         string          `json:"id"`
-	MerchantID string          `json:"merchantID"`
-	Name       string          `json:"name"`
-	Location   string          `json:"location"`
-	Rating     decimal.Decimal `json:"rating"`
-	City       City            `json:"city"`
-	Schedule   Schedule        `json:"schedule"`
-	Delivery   Delivery        `json:"delivery"`
-	Areas      Areas           `json:"areas"`
-	Address    string          `json:"address"`
-	IsActive   bool            `json:"isActive"`
-}
-
-type City struct {
-	ID        string `json:"ID" db:"id"`
-	CountryID string `json:"countryID" db:"country_id"`
-	Name      string `json:"name" db:"name"`
-	Geocenter string `json:"geocenter" db:"geocenter"`
-}
-
-type Schedule struct {
-	IsActive bool    `json:"isActive" `
-	Periods  Periods `json:"periods" `
-}
-
-type Periods struct {
-	Day  string `json:"day" `
-	From string `json:"from" `
-	To   string `json:"to" `
-}
-
-type Delivery struct {
-	IsActive bool    `json:"isActive" `
-	Periods  Periods `json:"periods" `
-}
-
-type Areas struct {
-	X string `json:"x" `
-	Y string `json:"y" `
-}
-
-type Currency struct {
-	ID      string `json:"id"`
-	Sign    string `json:"sign" `
-	Decimal string `json:"decimal"`
-	Prefix  bool   `json:"prefix" `
+	ID         string             `json:"id"`
+	MerchantID string             `json:"merchantID"`
+	Name       string             `json:"name"`
+	Address    string             `json:"address"`
+	Location   string             `json:"location"`
+	Rating     decimal.Decimal    `json:"rating"`
+	IsActive   bool               `json:"isActive"`
+	City       *city.Response     `json:"city,omitempty"`
+	Country    *country.Response  `json:"country,omitempty"`
+	Schedule   *schedule.Response `json:"schedule,omitempty"`
+	Delivery   *delivery.Response `json:"delivery,omitempty"`
+	Currency   *currency.Response `json:"currency,omitempty"`
+	Area       *delivery.Area     `json:"area,omitempty"`
 }
 
 func ParseFromEntity(data Entity) (res Response) {
@@ -97,7 +75,6 @@ func ParseFromEntity(data Entity) (res Response) {
 		Address:    *data.Address,
 		Location:   *data.Location,
 		Rating:     *data.Rating,
-		IsActive:   *data.IsActive,
 	}
 	return
 }

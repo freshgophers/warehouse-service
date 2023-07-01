@@ -2,7 +2,12 @@ package repository
 
 import (
 	"warehouse-service/internal/domain/category"
+	"warehouse-service/internal/domain/city"
+	"warehouse-service/internal/domain/country"
+	"warehouse-service/internal/domain/currency"
+	"warehouse-service/internal/domain/delivery"
 	"warehouse-service/internal/domain/product"
+	"warehouse-service/internal/domain/schedule"
 	"warehouse-service/internal/domain/store"
 	"warehouse-service/internal/repository/memory"
 	"warehouse-service/internal/repository/postgres"
@@ -20,6 +25,16 @@ type Repository struct {
 	Category category.Repository
 
 	Store store.Repository
+
+	City city.Repository
+
+	Schedule schedule.Repository
+
+	Delivery delivery.Repository
+
+	Country country.Repository
+
+	Currency currency.Repository
 }
 
 // New takes a variable amount of Configuration functions and returns a new Repository
@@ -75,9 +90,20 @@ func WithPostgresStore(schema, dataSourceName string) Configuration {
 		}
 
 		s.Category = postgres.NewCategoryRepository(s.postgres.Client)
+
 		s.Product = postgres.NewProductRepository(s.postgres.Client)
 
 		s.Store = postgres.NewStoreRepository(s.postgres.Client)
+
+		s.City = postgres.NewCityRepository(s.postgres.Client)
+
+		s.Schedule = postgres.NewScheduleRepository(s.postgres.Client)
+
+		s.Delivery = postgres.NewDeliveryRepository(s.postgres.Client)
+
+		s.Currency = postgres.NewCurrencyRepository(s.postgres.Client)
+
+		s.Country = postgres.NewCountryRepository(s.postgres.Client)
 
 		return
 	}

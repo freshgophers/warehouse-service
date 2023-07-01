@@ -1,5 +1,8 @@
 DO $$
-  DECLARE country_id UUID;
+  DECLARE
+    country_id UUID;
+    store_id UUID;
+    city_id UUID;
 
   BEGIN
     -- EXTENSIONS --
@@ -57,7 +60,7 @@ DO $$
         store_id    UUID NOT NULL UNIQUE,
         periods     JSONB NOT NULL,
         is_active   BOOLEAN NOT NULL DEFAULT FALSE,
-        FOREIGN KEY (store_id) REFERENCES stores (id)
+        FOREIGN KEY (store_id) REFERENCES stores (id) ON DELETE CASCADE
     );
 
     CREATE TABLE IF NOT EXISTS deliveries (
@@ -68,7 +71,7 @@ DO $$
         periods     JSONB NOT NULL,
         areas       JSONB NOT NULL,
         is_active   BOOLEAN NOT NULL DEFAULT FALSE,
-        FOREIGN KEY (store_id) REFERENCES stores (id)
+        FOREIGN KEY (store_id) REFERENCES stores (id) ON DELETE CASCADE
     );
 
     -- DATA --
@@ -77,10 +80,33 @@ DO $$
     RETURNING id INTO country_id;
 
     INSERT INTO cities (country_id, name, geocenter)
-    VALUES (country_id, 'Almaty', '43.238949, 76.889709');
+    VALUES (country_id, 'Almaty', '43.238949, 76.889709')
+    RETURNING id INTO city_id;
 
     INSERT INTO currencies (country_id, sign, decimals, prefix)
     VALUES (country_id, '₸', 0, FALSE);
-  
+
+
+  INSERT INTO stores (merchant_id, city_id, name, address, location, rating, is_active)
+  VALUES ('merchant_id',city_id, 'YourStoreName', 'YourAddress', 'YourLocation', 0, true)
+  RETURNING id INTO store_id;
+
+  -- Insert data into the schedules table
+  INSERT INTO schedules (store_id, periods, is_active)
+  VALUES (
+    store_id,
+    '[{"day": "Monday", "from": "09:00", "to":"17:00"}, {"day": "Thursday", "from": "09:00", "to":"17:00"}]',
+    true
+  );
+
+  -- Insert data into the deliveries table
+  INSERT INTO deliveries (store_id, periods, areas, is_active)
+  VALUES (
+    store_id,
+    '[{"day": "Monday", "from": "09:00", "to":"17:00"}, {"day": "Thursday", "from": "09:00", "to":"17:00"}]',
+    '[{"latitude": "31:3214", "longitude": "21:3123"}, {"latitude": "21:312314", "longitude": "43:312313"}]',
+    true
+  );
+
   COMMIT;
 END $$;

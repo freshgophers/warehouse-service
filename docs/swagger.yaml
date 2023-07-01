@@ -6,6 +6,55 @@ definitions:
       parentID:
         type: string
     type: object
+  city.Response:
+    properties:
+      geocenter:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+  currency.Response:
+    properties:
+      decimals:
+        type: string
+      id:
+        type: string
+      prefix:
+        type: boolean
+      sing:
+        type: string
+    type: object
+  delivery.Area:
+    properties:
+      latitude:
+        type: string
+      longitude:
+        type: string
+    type: object
+  delivery.Period:
+    properties:
+      day:
+        type: string
+      from:
+        type: string
+      to:
+        type: string
+    type: object
+  delivery.Response:
+    properties:
+      areas:
+        items:
+          $ref: '#/definitions/delivery.Area'
+        type: array
+      isActive:
+        type: boolean
+      periods:
+        items:
+          $ref: '#/definitions/delivery.Period'
+        type: array
+    type: object
   product.Request:
     properties:
       barcode:
@@ -35,11 +84,39 @@ definitions:
       success:
         type: boolean
     type: object
+  schedule.Period:
+    properties:
+      day:
+        type: string
+      from:
+        type: string
+      to:
+        type: string
+    type: object
+  schedule.Response:
+    properties:
+      isActive:
+        type: boolean
+      periods:
+        items:
+          $ref: '#/definitions/schedule.Period'
+        type: array
+    type: object
   store.Request:
     properties:
       address:
         type: string
+      area:
+        $ref: '#/definitions/delivery.Area'
+      city:
+        $ref: '#/definitions/city.Response'
       cityID:
+        type: string
+      currency:
+        $ref: '#/definitions/currency.Response'
+      delivery:
+        $ref: '#/definitions/delivery.Response'
+      id:
         type: string
       isActive:
         type: boolean
@@ -51,6 +128,8 @@ definitions:
         type: string
       rating:
         type: number
+      schedule:
+        $ref: '#/definitions/schedule.Response'
     type: object
 info:
   contact: {}
