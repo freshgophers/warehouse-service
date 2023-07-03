@@ -8,14 +8,12 @@ import (
 	_ "warehouse-service/docs"
 	"warehouse-service/internal/config"
 	"warehouse-service/internal/handler/http"
-	"warehouse-service/internal/service/catalogue"
 	"warehouse-service/internal/service/warehouse"
 	"warehouse-service/pkg/server/router"
 )
 
 type Dependencies struct {
 	Configs          config.Configs
-	CatalogueService *catalogue.Service
 	WarehouseService *warehouse.Service
 }
 
@@ -68,14 +66,10 @@ func WithHTTPHandler() Configuration {
 			httpSwagger.URL(swaggerURL.String()),
 		))
 
-		productHandler := http.NewProductHandler(h.dependencies.CatalogueService)
-		categoryHandler := http.NewCategoryHandler(h.dependencies.CatalogueService)
 		storeHandler := http.NewStoreHandler(h.dependencies.WarehouseService)
 		inventoryHandler := http.NewInventoryHandler(h.dependencies.WarehouseService)
 
 		h.HTTP.Route("/api/v1", func(r chi.Router) {
-			r.Mount("/products", productHandler.Routes())
-			r.Mount("/categories", categoryHandler.Routes())
 			r.Mount("/stores", storeHandler.Routes())
 			r.Mount("/inventories", inventoryHandler.Routes())
 		})

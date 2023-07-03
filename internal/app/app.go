@@ -16,7 +16,6 @@ import (
 	"warehouse-service/internal/config"
 	"warehouse-service/internal/handler"
 	"warehouse-service/internal/repository"
-	"warehouse-service/internal/service/catalogue"
 	"warehouse-service/pkg/log"
 	"warehouse-service/pkg/server"
 )
@@ -46,17 +45,6 @@ func Run() {
 	}
 	defer repositories.Close()
 
-	catalogueService, err := catalogue.New(
-		catalogue.WithCategoryRepository(repositories.Category),
-		catalogue.WithProductRepository(repositories.Product),
-		catalogue.WithCategoryCache(repositories.Category),
-		catalogue.WithProductCache(repositories.Product),
-	)
-	if err != nil {
-		logger.Error("ERR_INIT_CATALOGUE_SERVICE", zap.Error(err))
-		return
-	}
-
 	warehouseService, err := warehouse.New(
 		warehouse.WithStoreRepository(repositories.Store),
 		warehouse.WithStoreCache(repositories.Store),
@@ -72,7 +60,6 @@ func Run() {
 	handlers, err := handler.New(
 		handler.Dependencies{
 			Configs:          configs,
-			CatalogueService: catalogueService,
 			WarehouseService: warehouseService,
 		},
 		handler.WithHTTPHandler())

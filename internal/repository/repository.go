@@ -1,13 +1,11 @@
 package repository
 
 import (
-	"warehouse-service/internal/domain/category"
 	"warehouse-service/internal/domain/city"
 	"warehouse-service/internal/domain/country"
 	"warehouse-service/internal/domain/currency"
 	"warehouse-service/internal/domain/delivery"
 	"warehouse-service/internal/domain/inventory"
-	"warehouse-service/internal/domain/product"
 	"warehouse-service/internal/domain/schedule"
 	"warehouse-service/internal/domain/store"
 	"warehouse-service/internal/repository/memory"
@@ -21,9 +19,6 @@ type Configuration func(r *Repository) error
 // Repository is an implementation of the Repository
 type Repository struct {
 	postgres *storage.Database
-
-	Product  product.Repository
-	Category category.Repository
 
 	Store store.Repository
 
@@ -69,8 +64,6 @@ func (r *Repository) Close() {
 func WithMemoryStore() Configuration {
 	return func(s *Repository) (err error) {
 		// Create the memory store, if we needed parameters, such as connection strings they could be inputted here
-		s.Category = memory.NewCategoryRepository()
-		s.Product = memory.NewProductRepository()
 
 		s.Store = memory.NewStoreRepository()
 
@@ -91,10 +84,6 @@ func WithPostgresStore(schema, dataSourceName string) Configuration {
 		if err != nil {
 			return
 		}
-
-		s.Category = postgres.NewCategoryRepository(s.postgres.Client)
-
-		s.Product = postgres.NewProductRepository(s.postgres.Client)
 
 		s.Store = postgres.NewStoreRepository(s.postgres.Client)
 

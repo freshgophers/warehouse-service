@@ -832,3 +832,7 @@
 {"level":"info","ts":1688417740.710529,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
 {"level":"warn","ts":1688418451.756063,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
 {"level":"info","ts":1688418451.8399308,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688418985.191653,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688418985.2895439,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688419016.186375,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688419016.2749739,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
