@@ -8,6 +8,8 @@ definitions:
     type: object
   city.Response:
     properties:
+      country_id:
+        type: string
       geocenter:
         type: string
       id:
@@ -54,6 +56,29 @@ definitions:
         items:
           $ref: '#/definitions/delivery.Period'
         type: array
+    type: object
+  inventory.Request:
+    properties:
+      id:
+        type: string
+      is_available:
+        type: string
+      price:
+        type: string
+      price_previous:
+        type: string
+      price_special:
+        type: string
+      product_id:
+        type: string
+      quantity:
+        type: string
+      quantity_max:
+        type: string
+      quantity_min:
+        type: string
+      store_id:
+        type: string
     type: object
   product.Request:
     properties:
@@ -270,6 +295,142 @@ paths:
       summary: Update the category in the database
       tags:
       - categories
+  /inventories:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/response.Object'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Object'
+      summary: List of inventories from the database
+      tags:
+      - inventories
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: body param
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/inventory.Request'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Object'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Object'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Object'
+      summary: Add a new inventory to the database
+      tags:
+      - inventories
+  /inventories/{id}:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: path param
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Object'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Object'
+      summary: Delete the inventory from the database
+      tags:
+      - inventories
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: path param
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Object'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Object'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Object'
+      summary: Read the inventory from the database
+      tags:
+      - inventories
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: path param
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: body param
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/inventory.Request'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Object'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Object'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Object'
+      summary: Update the inventory in the database
+      tags:
+      - inventories
   /products:
     get:
       consumes:

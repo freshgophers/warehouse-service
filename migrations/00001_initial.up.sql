@@ -9,6 +9,23 @@ DO $$
     CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
     -- TABLES --
+    CREATE TABLE IF NOT EXISTS inventories (
+    created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id             UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),
+    store_id       VARCHAR NOT NULL,
+    catalog_id     VARCHAR NOT NULL,
+    product_id     VARCHAR,
+    quantity       INTEGER NOT NULL DEFAULT 0,
+    quantity_min   INTEGER NOT NULL DEFAULT 0,
+    quantity_max   INTEGER NOT NULL DEFAULT 0,
+    price          NUMERIC NOT NULL DEFAULT 0,
+    price_special  NUMERIC NOT NULL DEFAULT 0,
+    price_previous NUMERIC NOT NULL DEFAULT 0,
+    is_available   BOOLEAN NOT NULL DEFAULT FALSE
+    );
+
+
     CREATE TABLE IF NOT EXISTS countries (
         created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

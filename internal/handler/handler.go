@@ -69,13 +69,15 @@ func WithHTTPHandler() Configuration {
 		))
 
 		productHandler := http.NewProductHandler(h.dependencies.CatalogueService)
-		categoryHandler := http.NewCategory(h.dependencies.CatalogueService)
-		storeHandler := http.NewStore(h.dependencies.WarehouseService)
+		categoryHandler := http.NewCategoryHandler(h.dependencies.CatalogueService)
+		storeHandler := http.NewStoreHandler(h.dependencies.WarehouseService)
+		inventoryHandler := http.NewInventoryHandler(h.dependencies.WarehouseService)
 
 		h.HTTP.Route("/api/v1", func(r chi.Router) {
 			r.Mount("/products", productHandler.Routes())
 			r.Mount("/categories", categoryHandler.Routes())
 			r.Mount("/stores", storeHandler.Routes())
+			r.Mount("/inventories", inventoryHandler.Routes())
 		})
 
 		return

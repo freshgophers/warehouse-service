@@ -108,6 +108,7 @@ func (s *Service) GetStore(ctx context.Context, id string) (res store.Response, 
 func (s *Service) UpdateStore(ctx context.Context, id string, req store.Request) (err error) {
 	// Update store data by store ID
 	storeData := store.Entity{
+		CityID:   req.CityID,
 		Name:     &req.Name,
 		Location: &req.Location,
 		Rating:   &req.Rating,
@@ -118,12 +119,26 @@ func (s *Service) UpdateStore(ctx context.Context, id string, req store.Request)
 	if err != nil {
 		return
 	}
+
 	cityData := city.Entity{
+		CountryID: req.City.CountryID,
 		Name:      &req.City.Name,
 		GeoCenter: &req.City.GeoCenter,
 	}
 
-	err = s.cityRepository.Update(ctx, id, cityData)
+	err = s.cityRepository.Update(ctx, storeData.CityID, cityData)
+	if err != nil {
+		return
+	}
+
+	currencyData := currency.Entity{
+		ID:       req.Currency.ID,
+		Sign:     &req.Currency.Sign,
+		Decimals: &req.Currency.Decimals,
+		Prefix:   req.Currency.Prefix,
+	}
+
+	err = s.currencyRepository.Update(ctx, cityData.CountryID, currencyData)
 	if err != nil {
 		return
 	}

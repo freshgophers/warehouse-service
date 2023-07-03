@@ -14,7 +14,7 @@ type storeHandler struct {
 	StoreService *warehouse.Service
 }
 
-func NewStore(s *warehouse.Service) *storeHandler {
+func NewStoreHandler(s *warehouse.Service) *storeHandler {
 	return &storeHandler{StoreService: s}
 }
 

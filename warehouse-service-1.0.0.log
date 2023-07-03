@@ -690,3 +690,145 @@
 {"level":"info","ts":1688185701.865644,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
 {"level":"warn","ts":1688185839.2187572,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
 {"level":"info","ts":1688185839.317937,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688185946.8492749,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688185946.954785,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688186058.777002,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688186058.868195,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688186664.445513,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688186664.54969,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688186779.9624372,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688186780.1618361,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688186813.296488,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688186813.3835242,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187256.4426932,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187256.5150201,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187292.289369,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187292.359013,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187409.4470642,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187409.558358,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187447.0874891,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187447.176563,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187525.6828249,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187525.784269,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187549.682438,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187549.776493,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187663.0319,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187663.106705,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688187754.091253,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688187754.1896808,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688368701.263129,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688368701.36395,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688369296.253012,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688369296.310957,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688369373.4200692,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688369373.487844,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688369630.529871,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688369630.615915,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688369648.876364,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688369648.950806,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688369997.45747,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688369997.561763,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688370041.1545641,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688370041.2046149,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688370061.971603,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688370062.040566,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688370463.240098,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688370463.355254,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688370696.966547,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688370697.0444741,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371329.04927,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371329.169188,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371359.6652448,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371359.732372,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371373.509221,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371373.592937,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371444.138509,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371444.22415,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371579.936579,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371580.065407,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371638.91807,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371638.9987872,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371711.828235,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371711.9113119,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688371844.427721,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688371844.505001,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688372656.4684641,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688372656.554657,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688372739.861112,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688372739.939849,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688372785.787453,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688372785.878703,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688372831.257241,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688372831.314267,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688373030.355716,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688373030.452477,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688373067.861023,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688373067.942189,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688373238.1380649,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688373238.277994,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688373307.177682,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688373307.252459,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688373823.631926,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688373823.729831,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688374489.222655,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688374489.313201,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688374934.3619819,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688374934.458994,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688375393.577441,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688375393.657006,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688375592.337867,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688375592.406235,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688377069.179723,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688377069.276314,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688378769.751223,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688378769.901191,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381049.903054,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381049.9999108,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381107.1513941,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381107.255629,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381148.753319,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381148.8736708,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381242.187711,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381242.274726,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381323.239451,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381323.323232,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381451.7113862,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381451.777929,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381520.476247,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381520.58389,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381552.546889,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381552.64561,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688381961.251449,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688381961.328901,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688382297.8543968,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688382297.9424179,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688389514.3409111,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1688389514.477699,"caller":"app/app.go:44","msg":"ERR_INIT_REPOSITORY","error":"migration failed: syntax error at or near \")\" (column 1) in line 25: DO $$\n  DECLARE\n    country_id UUID;\n    store_id UUID;\n    city_id UUID;\n\n  BEGIN\n    -- EXTENSIONS --\n    CREATE EXTENSION IF NOT EXISTS pgcrypto;\n\n    -- TABLES --\n    CREATE TABLE IF NOT EXISTS inventories (\n    created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    updated_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    id             UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),\n    store_id       VARCHAR NOT NULL,\n    catalog_id     VARCHAR NOT NULL,\n    quantity       INTEGER NOT NULL DEFAULT 0,\n    quantity_min   INTEGER NOT NULL DEFAULT 0,\n    quantity_max   INTEGER NOT NULL DEFAULT 0,\n    price          NUMERIC NOT NULL DEFAULT 0,\n    price_special  NUMERIC NOT NULL DEFAULT 0,\n    price_previous NUMERIC NOT NULL DEFAULT 0,\n    is_available   BOOLEAN NOT NULL DEFAULT FALSE,\n);\n\n\n    CREATE TABLE IF NOT EXISTS countries (\n        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        id          UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),\n        name        VARCHAR NOT NULL UNIQUE\n    );\n\n    CREATE TABLE IF NOT EXISTS cities (\n        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        id          UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),\n        country_id  UUID NOT NULL,\n        name        VARCHAR NOT NULL UNIQUE,\n        geocenter   VARCHAR NOT NULL,\n        FOREIGN KEY (country_id) REFERENCES countries (id)\n    );\n\n    CREATE TABLE IF NOT EXISTS currencies (\n        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        id          UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),\n        country_id  UUID NOT NULL,\n        sign        VARCHAR NOT NULL UNIQUE,\n        decimals    INTEGER NOT NULL,\n        prefix      BOOLEAN NOT NULL DEFAULT FALSE,\n        FOREIGN KEY (country_id) REFERENCES countries (id)\n    );\n\n\n    CREATE TABLE IF NOT EXISTS stores (\n        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        id          UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),\n        merchant_id VARCHAR NOT NULL,\n        city_id     UUID NOT NULL,\n        name        VARCHAR NOT NULL,\n        address     VARCHAR NOT NULL,\n        location    VARCHAR NOT NULL,\n        rating      NUMERIC NOT NULL DEFAULT 0,\n        is_active   BOOLEAN NOT NULL DEFAULT FALSE,\n        FOREIGN KEY (city_id) REFERENCES cities (id)\n\n    );\n\n    CREATE TABLE IF NOT EXISTS schedules (\n        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        id          UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),\n        store_id    UUID NOT NULL UNIQUE,\n        periods     JSONB NOT NULL,\n        is_active   BOOLEAN NOT NULL DEFAULT FALSE,\n        FOREIGN KEY (store_id) REFERENCES stores (id) ON DELETE CASCADE\n    );\n\n    CREATE TABLE IF NOT EXISTS deliveries (\n        created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n        id          UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),\n        store_id    UUID NOT NULL UNIQUE,\n        periods     JSONB NOT NULL,\n        areas       JSONB NOT NULL,\n        is_active   BOOLEAN NOT NULL DEFAULT FALSE,\n        FOREIGN KEY (store_id) REFERENCES stores (id) ON DELETE CASCADE\n    );\n\n    -- DATA --\n    INSERT INTO countries (name)\n    VALUES ('Kazakhstan')\n    RETURNING id INTO country_id;\n\n    INSERT INTO cities (country_id, name, geocenter)\n    VALUES (country_id, 'Almaty', '43.238949, 76.889709')\n    RETURNING id INTO city_id;\n\n    INSERT INTO currencies (country_id, sign, decimals, prefix)\n    VALUES (country_id, '₸', 0, FALSE);\n\n\n  INSERT INTO stores (merchant_id, city_id, name, address, location, rating, is_active)\n  VALUES ('merchant_id',city_id, 'YourStoreName', 'YourAddress', 'YourLocation', 0, true)\n  RETURNING id INTO store_id;\n\n  -- Insert data into the schedules table\n  INSERT INTO schedules (store_id, periods, is_active)\n  VALUES (\n    store_id,\n    '[{\"day\": \"Monday\", \"from\": \"09:00\", \"to\":\"17:00\"}, {\"day\": \"Thursday\", \"from\": \"09:00\", \"to\":\"17:00\"}]',\n    true\n  );\n\n  -- Insert data into the deliveries table\n  INSERT INTO deliveries (store_id, periods, areas, is_active)\n  VALUES (\n    store_id,\n    '[{\"day\": \"Monday\", \"from\": \"09:00\", \"to\":\"17:00\"}, {\"day\": \"Thursday\", \"from\": \"09:00\", \"to\":\"17:00\"}]',\n    '[{\"latitude\": \"31:3214\", \"longitude\": \"21:3123\"}, {\"latitude\": \"21:312314\", \"longitude\": \"43:312313\"}]',\n    true\n  );\n\n  COMMIT;\nEND $$; (details: pq: syntax error at or near \")\")","stacktrace":"warehouse-service/internal/app.Run\n\t/Users/rakhmet_zhanserik/Projects/warehouse-service/internal/app/app.go:44\nmain.main\n\t/Users/rakhmet_zhanserik/Projects/warehouse-service/main.go:8\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1688389566.761236,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688389566.930414,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688407654.032919,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688407654.1295629,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688408163.096212,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688408163.1948469,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688412301.0804029,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688412301.165571,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688412319.471959,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688412319.547852,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688412943.584376,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688412943.6472378,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688417334.914207,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688417335.017673,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688417359.919004,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688417359.98353,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688417517.386915,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688417517.4711502,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688417579.036714,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688417579.12684,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688417616.344366,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688417616.433544,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688417626.8614972,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688417626.930754,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688417740.618544,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688417740.710529,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}
+{"level":"warn","ts":1688418451.756063,"caller":"log/log.go:37","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1688418451.8399308,"caller":"server/server.go:47","msg":"http server started on http://localhost:80"}

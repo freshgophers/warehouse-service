@@ -60,12 +60,14 @@ func Run() {
 	warehouseService, err := warehouse.New(
 		warehouse.WithStoreRepository(repositories.Store),
 		warehouse.WithStoreCache(repositories.Store),
-		warehouse.WithCityRepository(repositories.City),
-		warehouse.WithScheduleRepository(repositories.Schedule),
-		warehouse.WithDeliveryRepository(repositories.Delivery),
-		warehouse.WithCurrencyRepository(repositories.Currency),
-		warehouse.WithCountryRepository(repositories.Country),
+		warehouse.WithInventoryRepository(repositories.Inventory),
+		warehouse.WithInventoryCache(repositories.Inventory),
 	)
+
+	if err != nil {
+		logger.Error("ERR_INIT_CATALOGUE_SERVICE", zap.Error(err))
+		return
+	}
 
 	handlers, err := handler.New(
 		handler.Dependencies{

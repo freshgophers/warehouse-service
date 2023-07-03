@@ -83,15 +83,14 @@ func (s *CityRepository) Update(ctx context.Context, id string, data city.Entity
 	return
 }
 
-func (s *CityRepository) prepareArgs(data city.Entity) (sets []string, args []any) {
-
+func (s *CityRepository) prepareArgs(data city.Entity) (sets []string, args []interface{}) {
 	if data.Name != nil {
-		args = append(args, data.Name)
+		args = append(args, *data.Name)
 		sets = append(sets, fmt.Sprintf("name=$%d", len(args)))
 	}
 
 	if data.GeoCenter != nil {
-		args = append(args, data.GeoCenter)
+		args = append(args, *data.GeoCenter)
 		sets = append(sets, fmt.Sprintf("geocenter=$%d", len(args)))
 	}
 

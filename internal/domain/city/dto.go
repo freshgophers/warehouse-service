@@ -9,6 +9,7 @@ type Request struct {
 	ID        string `json:"id"`
 	Name      string `json:"name"`
 	GeoCenter string `json:"geocenter"`
+	CountryID string `json:"country_id"`
 }
 
 func (s *Request) Bind(r *http.Request) error {
@@ -31,6 +32,7 @@ type Response struct {
 	ID        string `json:"id"`
 	Name      string `json:"name"`
 	GeoCenter string `json:"geocenter"`
+	CountryID string `json:"country_id"`
 }
 
 func ParseFromEntity(data *Entity) (res *Response) {
@@ -42,6 +44,7 @@ func ParseFromEntity(data *Entity) (res *Response) {
 		ID:        data.ID,
 		Name:      *data.Name,
 		GeoCenter: *data.GeoCenter,
+		CountryID: data.CountryID,
 	}
 
 	return

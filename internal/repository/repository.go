@@ -6,6 +6,7 @@ import (
 	"warehouse-service/internal/domain/country"
 	"warehouse-service/internal/domain/currency"
 	"warehouse-service/internal/domain/delivery"
+	"warehouse-service/internal/domain/inventory"
 	"warehouse-service/internal/domain/product"
 	"warehouse-service/internal/domain/schedule"
 	"warehouse-service/internal/domain/store"
@@ -35,6 +36,8 @@ type Repository struct {
 	Country country.Repository
 
 	Currency currency.Repository
+
+	Inventory inventory.Repository
 }
 
 // New takes a variable amount of Configuration functions and returns a new Repository
@@ -104,6 +107,8 @@ func WithPostgresStore(schema, dataSourceName string) Configuration {
 		s.Currency = postgres.NewCurrencyRepository(s.postgres.Client)
 
 		s.Country = postgres.NewCountryRepository(s.postgres.Client)
+
+		s.Inventory = postgres.NewInventoryRepository(s.postgres.Client)
 
 		return
 	}

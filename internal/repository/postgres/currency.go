@@ -86,12 +86,12 @@ func (s *CurrencyRepository) Update(ctx context.Context, countryID string, data 
 func (s *CurrencyRepository) prepareArgs(data currency.Entity) (sets []string, args []any) {
 
 	if data.Sign != nil {
-		args = append(args, data.Sign)
+		args = append(args, *data.Sign)
 		sets = append(sets, fmt.Sprintf("sign=$%d", len(args)))
 	}
 
 	if data.Decimals != nil {
-		args = append(args, data.Decimals)
+		args = append(args, *data.Decimals)
 		sets = append(sets, fmt.Sprintf("decimals=$%d", len(args)))
 	}
 
