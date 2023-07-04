@@ -6,11 +6,11 @@ import (
 )
 
 func (s *Service) ListInventory(ctx context.Context) (res []inventory.Response, err error) {
-	data, err := s.inventoryRepository.Select(ctx)
+	inventorData, err := s.inventoryRepository.Select(ctx)
 	if err != nil {
 		return
 	}
-	res = inventory.ParseFromEntities(data)
+	res = inventory.ParseFromEntities(inventorData)
 
 	return
 }
@@ -44,12 +44,11 @@ func (s *Service) GetInventory(ctx context.Context, id string) (res inventory.Re
 func (s *Service) UpdateInventory(ctx context.Context, id string, req inventory.Request) (err error) {
 	data := inventory.Entity{
 		Quantity:      &req.Quantity,
-		QuantityMin:   &req.QuantityMin,
-		QuantityMax:   &req.QuantityMax,
+		QuantityMin:   req.QuantityMin,
+		QuantityMax:   req.QuantityMax,
 		Price:         &req.Price,
-		PriceSpecial:  &req.PriceSpecial,
-		PricePrevious: &req.PricePrevious,
-		IsAvailable:   &req.IsAvailable,
+		PriceSpecial:  req.PriceSpecial,
+		PricePrevious: req.PricePrevious,
 	}
 	return s.inventoryRepository.Update(ctx, id, data)
 }

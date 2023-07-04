@@ -44,6 +44,7 @@ func (s *Service) ListStores(ctx context.Context) (res []store.Response, err err
 			return nil, err
 		}
 		res[i].Delivery = delivery.ParseFromEntity(deliveryData)
+
 	}
 
 	return

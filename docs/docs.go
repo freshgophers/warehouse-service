@@ -520,7 +520,7 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "is_available": {
-                    "type": "string"
+                    "type": "boolean"
                 },
                 "price": {
                     "type": "string"

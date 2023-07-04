@@ -6,16 +6,16 @@ import (
 )
 
 type Request struct {
-	ID            string `json:"id"`
-	StoreID       string `json:"store_id"`
-	ProductID     string `json:"product_id"`
-	Quantity      string `json:"quantity"`
-	QuantityMin   string `json:"quantity_min"`
-	QuantityMax   string `json:"quantity_max"`
-	Price         string `json:"price"`
-	PriceSpecial  string `json:"price_special"`
-	PricePrevious string `json:"price_previous"`
-	IsAvailable   string `json:"is_available"`
+	ID            string  `json:"id"`
+	StoreID       string  `json:"store_id"`
+	ProductID     string  `json:"product_id"`
+	Quantity      string  `json:"quantity"`
+	QuantityMin   *string `json:"quantity_min"`
+	QuantityMax   *string `json:"quantity_max"`
+	Price         string  `json:"price"`
+	PriceSpecial  *string `json:"price_special"`
+	PricePrevious *string `json:"price_previous"`
+	IsAvailable   *bool   `json:"is_available"`
 }
 
 func (s *Request) Bind(r *http.Request) error {
@@ -39,16 +39,16 @@ func (s *Request) Bind(r *http.Request) error {
 }
 
 type Response struct {
-	ID            string `json:"id"`
-	StoreID       string `json:"store_id"`
-	ProductID     string `json:"product_id"`
-	Quantity      string `json:"quantity"`
-	QuantityMin   string `json:"quantity_min"`
-	QuantityMax   string `json:"quantity_max"`
-	Price         string `json:"price"`
-	PriceSpecial  string `json:"price_special"`
-	PricePrevious string `json:"price_previous"`
-	IsAvailable   string `json:"is_available"`
+	ID            string  `json:"id"`
+	StoreID       string  `json:"store_id"`
+	ProductID     string  `json:"product_id"`
+	Quantity      string  `json:"quantity"`
+	QuantityMin   *string `json:"quantity_min"`
+	QuantityMax   *string `json:"quantity_max"`
+	Price         string  `json:"price"`
+	PriceSpecial  *string `json:"price_special"`
+	PricePrevious *string `json:"price_previous"`
+	IsAvailable   *bool   `json:"is_available"`
 }
 
 func ParseFromEntity(data Entity) (res Response) {
@@ -56,12 +56,11 @@ func ParseFromEntity(data Entity) (res Response) {
 		ID:            data.ID,
 		StoreID:       data.StoreID,
 		Quantity:      *data.Quantity,
-		QuantityMin:   *data.QuantityMin,
-		QuantityMax:   *data.QuantityMax,
+		QuantityMin:   data.QuantityMin,
+		QuantityMax:   data.QuantityMax,
 		Price:         *data.Price,
-		PriceSpecial:  *data.PriceSpecial,
-		PricePrevious: *data.PricePrevious,
-		IsAvailable:   *data.IsAvailable,
+		PriceSpecial:  data.PriceSpecial,
+		PricePrevious: data.PricePrevious,
 	}
 	return
 }

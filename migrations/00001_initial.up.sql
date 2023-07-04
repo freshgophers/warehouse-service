@@ -14,7 +14,7 @@ DO $$
     updated_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     id             UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),
     store_id       VARCHAR NOT NULL,
-    catalog_id     VARCHAR NOT NULL,
+    catalog_id     VARCHAR,
     product_id     VARCHAR,
     quantity       INTEGER NOT NULL DEFAULT 0,
     quantity_min   INTEGER NOT NULL DEFAULT 0,

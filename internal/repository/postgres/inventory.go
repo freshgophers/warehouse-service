@@ -23,7 +23,7 @@ func NewInventoryRepository(db *sqlx.DB) *InventoryRepository {
 
 func (s *InventoryRepository) Select(ctx context.Context) (dest []inventory.Entity, err error) {
 	query := `
-        SELECT id, store_id,product_id quantity, quantity_min,quantity_max,price,price_sepcial,price_previous,is_available
+        SELECT id, store_id,product_id quantity, quantity_min,quantity_max,price,price_special,price_previous,is_available
         FROM inventories`
 
 	err = s.db.SelectContext(ctx, &dest, query)
@@ -33,7 +33,7 @@ func (s *InventoryRepository) Select(ctx context.Context) (dest []inventory.Enti
 
 func (s *InventoryRepository) Create(ctx context.Context, data inventory.Entity) (id string, err error) {
 	query := `
-        INSERT INTO inventories(store_id,product_id quantity, price)
+        INSERT INTO inventories(store_id,product_id,quantity, price)
         VALUES ($1, $2, $3,$4)
         RETURNING id`
 
@@ -86,31 +86,31 @@ func (s *InventoryRepository) Update(ctx context.Context, storeID string, data i
 func (s *InventoryRepository) prepareArgs(data inventory.Entity) (sets []string, args []any) {
 
 	if data.Quantity != nil {
-		args = append(args, data.Quantity)
+		args = append(args, *data.Quantity)
 		sets = append(sets, fmt.Sprintf("quantity=$%d", len(args)))
 	}
 	if data.QuantityMin != nil {
-		args = append(args, data.QuantityMin)
+		args = append(args, *data.QuantityMin)
 		sets = append(sets, fmt.Sprintf("quantity_min=$%d", len(args)))
 	}
 	if data.QuantityMax != nil {
-		args = append(args, data.QuantityMax)
+		args = append(args, *data.QuantityMax)
 		sets = append(sets, fmt.Sprintf("quantity_max=$%d", len(args)))
 	}
 	if data.Price != nil {
-		args = append(args, data.Price)
+		args = append(args, *data.Price)
 		sets = append(sets, fmt.Sprintf("price=$%d", len(args)))
 	}
 	if data.PriceSpecial != nil {
-		args = append(args, data.PriceSpecial)
+		args = append(args, *data.PriceSpecial)
 		sets = append(sets, fmt.Sprintf("price_special=$%d", len(args)))
 	}
 	if data.PricePrevious != nil {
-		args = append(args, data.PricePrevious)
+		args = append(args, *data.PricePrevious)
 		sets = append(sets, fmt.Sprintf("price_previous=$%d", len(args)))
 	}
 	if data.IsAvailable != nil {
-		args = append(args, data.IsAvailable)
+		args = append(args, *data.IsAvailable)
 		sets = append(sets, fmt.Sprintf("is_available=$%d", len(args)))
 	}
 

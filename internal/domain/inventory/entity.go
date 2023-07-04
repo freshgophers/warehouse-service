@@ -15,5 +15,5 @@ type Entity struct {
 	Price         *string   `db:"price"`
 	PriceSpecial  *string   `db:"price_special"`
 	PricePrevious *string   `db:"price_previous"`
-	IsAvailable   *string   `db:"is_available"`
+	IsAvailable   *bool     `db:"is_available"`
 }
